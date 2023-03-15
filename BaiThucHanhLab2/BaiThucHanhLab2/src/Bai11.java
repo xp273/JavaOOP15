@@ -11,7 +11,7 @@ public class Bai11 {
         {
             System.out.print("Nhap so luong phan tu can sap xep: ");
             size = sc.nextInt();
-        } while (size>0);
+        } while (size<0);
 
         a = b = new int [size];
 
@@ -19,8 +19,11 @@ public class Bai11 {
         {
             System.out.printf("a[%d] = ", i);
             a[i] = sc.nextInt();
-            b[i] = a[i];
+            a[i] = b[i];
         }
+
+        System.out.println("Mang truoc khi sap xep: ");
+        for(int i = 0; i < a.length; i++) System.out.printf("a[%d] = %d \n",i, a[i]);
 
         for(int i = 0; i < size-1; i++) {
             for (int j = i+1; j<b.length; j++) {
@@ -32,10 +35,10 @@ public class Bai11 {
             }
         }
 
-        System.out.print("Mang truoc khi sap xep: ");
-        System.out.print("Mang sau khi sap xep: ");
+        System.out.println("Mang sau khi sap xep: ");
+        for(int i = 0; i < b.length; i++) System.out.printf("b[%d] = %d \n",i, b[i]);
 
-
+        sc.close();
 
     }
     
