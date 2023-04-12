@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 468eda2e97f1558720347f34ca9bd60059ff9ded
 import java.util.Scanner;
 
 public class HinhTru {
