@@ -1,5 +1,9 @@
+import NhanVien;
+import  shapes.HinhTron;
+package Shapes.HinhTru;
 
-public class App {
+
+public class Main {
     public static void main(String[] args) {
         
         //Hinh tron
