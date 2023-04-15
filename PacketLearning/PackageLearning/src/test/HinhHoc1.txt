@@ -1,0 +1,31 @@
+package test;
+
+public class HinhHoc1 {
+
+
+    public String ten;
+
+    public void xuatTen(){
+        System.out.println("==== " + ten + " ====");
+    }   
+}
+
+public class HinhTron extends HinhHoc1 {
+
+    public HinhTron() {
+        ten = "Hinh tron";
+    }
+
+    public void xuatTen(){
+        super.xuatTen(); //super -> class HinhHoc1, tranh nham lan voi HinhHoc1.xuatTen()
+        System.out.println("\nHam in ten tu HT");
+    }
+}
+
+public class MainClass{
+
+    public static void main(String[] args) {
+        HinhTron ht1 = new HinhTron();
+        ht1.xuatTen();
+    }
+}

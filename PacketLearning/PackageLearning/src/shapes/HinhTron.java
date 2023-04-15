@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class HinhTron extends HinhHoc{
 
-    public float banKinh;
+    private final float PI = 3.14f;
+    private float banKinh;
     public HinhTron(){
         ten = "Hinh Tron";
     }
@@ -16,6 +17,11 @@ public class HinhTron extends HinhHoc{
         banKinh = sc.nextFloat();
     }
 
+    public void setBanKinh(){
+        System.out.print("Hay nhap ban kinh hinh tron: ");
+        this.banKinh = sc.nextFloat();
+    }
+
     public void tinhChuVi(){
         chuVi = 2 * PI * banKinh;
     }
@@ -24,6 +30,10 @@ public class HinhTron extends HinhHoc{
         dienTich = PI * banKinh * banKinh;
     }
 
+
+    public void xuatThongTin(){
+        System.out.println("Day la hinh tron");
+    }
 }
 
 

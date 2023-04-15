@@ -1,6 +1,7 @@
 package shapes;
 import java.util.Scanner;
 
+
 public class HinhTru extends HinhTron{
     
     public float chieuCao;
@@ -20,5 +21,11 @@ public class HinhTru extends HinhTron{
     public void tinhTheTich(){
         tinhDienTich();
         theTich = dienTich * chieuCao;
+    }
+
+    
+    @Override
+    public void xuatThongTin(){
+        System.out.println("Day la hinh tru");
     }
 }
