@@ -31,7 +31,7 @@ import java.util.Scanner;
         }
         
         @Override
-        public void Search(String name){
+        public void Search(arrDB[]){
             for(int i = 0; i < arrDB.length; i++){
                 boolean kt = true;
                 if(arrDB[i].FullName.equals(name)){
@@ -45,7 +45,7 @@ import java.util.Scanner;
     
     
         @Override
-        public void Update(String name){
+        public void Update(arrDB[]){
             for(int i = 0; i < arrDB.length; i++){
                 boolean kt = true;
                 if(arrDB[i].FullName.equals(name)){
@@ -64,7 +64,7 @@ import java.util.Scanner;
     
     
         @Override
-        public void Delete(String name){
+        public void Delete(arrDB[]){
             for(int i = 0; i < arrDB.length; i++){
                 boolean kt = true;
                 if(arrDB[i].FullName.equals(name)){
