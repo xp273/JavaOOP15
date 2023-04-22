@@ -11,11 +11,12 @@ public class HinhTru extends HinhTron{
         ten = "Hinh tru";
     }
 
-    public void nhapChieuCao(){
-        nhapBanKink();
+    public float getChieuCao(){
+        return chieuCao;
+    }
 
-        System.out.print("Hay nhap chieu cao hinh tru:  ");
-        chieuCao = sc.nextFloat();
+    public void setChieuCao(float chieuCao){
+        this.chieuCao = chieuCao;
     }
 
     public void tinhTheTich(){
@@ -24,8 +25,4 @@ public class HinhTru extends HinhTron{
     }
 
     
-    @Override
-    public void xuatThongTin(){
-        System.out.println("Day la hinh tru");
-    }
 }

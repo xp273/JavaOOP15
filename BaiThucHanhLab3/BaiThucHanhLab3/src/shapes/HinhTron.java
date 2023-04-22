@@ -12,14 +12,12 @@ public class HinhTron extends HinhHoc{
 
     Scanner sc = new Scanner(System.in);
 
-    public void nhapBanKink(){
-        System.out.print("Hay nhap ban kinh hinh tron: ");
-        banKinh = sc.nextFloat();
+    public float getBanKink(){
+        return banKinh;
     }
 
-    public void setBanKinh(){
-        System.out.print("Hay nhap ban kinh hinh tron: ");
-        this.banKinh = sc.nextFloat();
+    public void setBanKinh(float banKinh){
+        this.banKinh = banKinh;
     }
 
     public void tinhChuVi(){
@@ -30,10 +28,6 @@ public class HinhTron extends HinhHoc{
         dienTich = PI * banKinh * banKinh;
     }
 
-
-    public void xuatThongTin(){
-        System.out.println("Day la hinh tron");
-    }
 }
 
 
