@@ -13,7 +13,7 @@ public class MainDB {
     
     public static void main(String[] args) {
 
-        createDB(FullName, NewPhoneNum);
+        createDB(FullName, PhoneNum);
         while(true){
 
             System.out.println("Nhap lua chon: ");
@@ -24,15 +24,15 @@ public class MainDB {
             System.out.println("5 - Danh sach nguoi dung");
             
             switch(sc.nextInt()){
-                case 1 :InsertUser();
+                case 1 :InsertUser(FullName, PhoneNum, SearchName);
                         break;
-                case 2 :UpdateUser();
+                case 2 :UpdateUser(SearchName, NewFullName, NewPhoneNum);
                         break;
-                case 3 :DeleteUser();
+                case 3 :DeleteUser(SearchName, FullName, PhoneNum);
                         break;
-                case 4 :SearchUser();
+                case 4 :SearchUser(SearchName, FullName, PhoneNum);
                         break;
-                case 5 :viewAllUsers();
+                case 5 :viewAllUsers( FullName, PhoneNum);
                         break;
                }
 
@@ -41,37 +41,37 @@ public class MainDB {
             }
     }
 
-    private static void InsertUser(){
+    private static void InsertUser(String FullName, String PhoneNum, String SearchName){
         db.addDataName();
         db.addDataNum();
         ct.Insert(SearchName, FullName, PhoneNum);
     }
 
-    private static void UpdateUser(){
+    private static void UpdateUser(String SearchName, String NewFullName, String NewPhoneNum ){
         db.searchUser();
         db.updateName();
         db.updateNum();
         ct.Update(NewFullName, SearchName, NewPhoneNum);
     }
 
-    private static void DeleteUser(){
+    private static void DeleteUser(String SearchName, String FullName, String PhoneNum){
         db.searchUser();
         db.removeUserName();
         db.removeUserNum();
         ct.Delete(SearchName, FullName, PhoneNum);
     }
 
-    private static void SearchUser(){
+    private static void SearchUser(String SearchName, String FullName, String PhoneNum){
         db.searchUser();
         ct.Search(SearchName, FullName, PhoneNum);
     }
 
-    private static void viewAllUsers(){
+    private static void viewAllUsers(String FullName, String PhoneNum){
         ct.viewUsers(FullName, PhoneNum);
     }
 
     private static void createDB(String FullName, String PhoneNum){
-        ct.GenerateDB( FullName, PhoneNum);
+        ct.GenerateDB(FullName, PhoneNum);
     }
 
    

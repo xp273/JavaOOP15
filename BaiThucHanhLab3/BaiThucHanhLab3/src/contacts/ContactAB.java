@@ -8,7 +8,6 @@ public class ContactAB extends Contact{
 
     String arrDB[] = new String [10];
 
-    @Override
     public void GenerateDB(String FullName,String PhoneNum){
         for(int i = 0; i < arrDB.length; i++){
             FullName = "0";
@@ -18,7 +17,6 @@ public class ContactAB extends Contact{
         }
     }
 
-    @Override
     public void Insert(String FullName,String SearchName, String PhoneNum){
         
         boolean kt = false;
@@ -28,6 +26,7 @@ public class ContactAB extends Contact{
                
                 kt = true;
                 System.out.println("Da co thong tin cua nguoi dung!");
+                    FullName = SearchName;
 
                 if(!arrDB[i].contains(PhoneNum)){
                     System.out.println("Nguoi dung khong co so dien thoai!");
@@ -44,7 +43,6 @@ public class ContactAB extends Contact{
         
     }
 
-    @Override
     public void Update(String NewFullName, String SearchName, String NewPhoneNum){
         boolean kt = false;
 
@@ -66,7 +64,6 @@ public class ContactAB extends Contact{
         }
     }
 
-    @Override
     public void Delete(String SearchName, String FullName, String PhoneNum) {
         boolean kt = false;
 
@@ -89,7 +86,6 @@ public class ContactAB extends Contact{
         
     }
 
-    @Override
     public void Search(String SearchName, String FullName, String PhoneNum) {
         boolean kt = false;
         
