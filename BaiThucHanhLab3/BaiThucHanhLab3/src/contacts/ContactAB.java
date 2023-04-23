@@ -9,6 +9,16 @@ public class ContactAB extends Contact{
     String arrDB[] = new String [10];
 
     @Override
+    public void GenerateDB(String FullName,String PhoneNum){
+        for(int i = 0; i < arrDB.length; i++){
+            FullName = "0";
+            PhoneNum = "0";
+            arrDB[i] = FullName + " - " + PhoneNum;
+
+        }
+    }
+
+    @Override
     public void Insert(String FullName,String SearchName, String PhoneNum){
         
         boolean kt = false;
@@ -20,16 +30,12 @@ public class ContactAB extends Contact{
                 System.out.println("Da co thong tin cua nguoi dung!");
 
                 if(!arrDB[i].contains(PhoneNum)){
-                    System.out.println("Nguoi dung khong co so dien thoai, nhap so dien thoai cua nguoi dung: ");
-                    PhoneNum = sc.nextLine();
+                    System.out.println("Nguoi dung khong co so dien thoai!");
+                    db.updateNum();
                 } 
                     
                 if( kt = false ){
-                    System.out.println("Nhap ten nguoi dung can them:");
-                    FullName = sc.nextLine();
-                    System.out.println("Nhap SDT:");
-                    PhoneNum = sc.nextLine();
-                    arrDB[i] = FullName + " - " + PhoneNum;
+                    db.addData();
                     System.out.println("Da luu thong tin: " + arrDB[i]);
                 }
             } 
@@ -48,10 +54,8 @@ public class ContactAB extends Contact{
                 System.out.println("Da tim thay nguoi dung: " + arrDB[i]);
 
                 System.out.println("Thay doi thong tin:");
-                System.out.println("Thay doi ten: ");
-                NewFullName = sc.nextLine();
-                System.out.println("Thay doi SDT: ");
-                NewPhoneNum = sc.nextLine();
+                db.updateName();
+                db.updateNum();
                 arrDB[i] = NewFullName + " - " + NewPhoneNum;  
             }
 
@@ -71,8 +75,7 @@ public class ContactAB extends Contact{
                 kt = true;
                 System.out.println("Da tim thay nguoi dung: " + arrDB[i]);
 
-                FullName = null;
-                PhoneNum = null;
+                db.removeUser();
                 arrDB[i] = FullName + " - " + PhoneNum;
                 System.out.println("Da xoa nguoi dung! ");
             }
@@ -102,4 +105,14 @@ public class ContactAB extends Contact{
         
         
     } 
+
+    public void viewUsers(String FullName, String PhoneNum){
+        for(int i = 0; i < arrDB.length; i++){
+            System.out.println("=========================");
+            System.out.println("\n");
+            System.out.printf(" %d: %s", i, arrDB[i]);
+            System.out.println("\n");
+        }
+        
+    }
 }  
