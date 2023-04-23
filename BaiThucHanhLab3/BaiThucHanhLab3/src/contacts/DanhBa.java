@@ -1,36 +1,50 @@
 package contacts;
 import java.util.Scanner;
 
+
 public class DanhBa {
     Scanner sc = new Scanner(System.in);
     public String SearchName, FullName, PhoneNum, NewFullName, NewPhoneNum;
 
 
-    public void searchUser(){
+    public String searchUser(){
         System.out.println("Nhap ten nguoi dung: ");
         SearchName = sc.nextLine();
+        return SearchName;
     }
 
-    public void addData(){
+    public String addDataName(){
         System.out.println("Nhap ten nguoi dung: ");
         FullName = sc.nextLine();
+        return FullName;
+    }
+
+    public String addDataNum(){
         System.out.println("Nhap SDT nguoi dung: ");
         PhoneNum = sc.nextLine();
+        return PhoneNum;
     }
 
-    public void updateName(){
+    public String updateName(){
         System.out.println("Nhap ten moi cua nguoi dung: ");
         NewFullName = sc.nextLine();
+        return NewFullName;
     }
 
-    public void updateNum(){
+    public String updateNum(){
         System.out.println("Nhap ten moi cua nguoi dung: ");
         NewPhoneNum = sc.nextLine();
+        return NewPhoneNum;
     }
     
-    public void removeUser(){
+    public String removeUserName(){
         FullName = null;
+        return FullName;
+    }
+
+    public String removeUserNum(){
         PhoneNum = null;
+        return PhoneNum;
     }
 
 

@@ -35,7 +35,8 @@ public class ContactAB extends Contact{
                 } 
                     
                 if( kt = false ){
-                    db.addData();
+                    db.addDataName();
+                    db.addDataNum();
                     System.out.println("Da luu thong tin: " + arrDB[i]);
                 }
             } 
@@ -75,7 +76,8 @@ public class ContactAB extends Contact{
                 kt = true;
                 System.out.println("Da tim thay nguoi dung: " + arrDB[i]);
 
-                db.removeUser();
+                db.removeUserName();
+                db.removeUserNum();
                 arrDB[i] = FullName + " - " + PhoneNum;
                 System.out.println("Da xoa nguoi dung! ");
             }

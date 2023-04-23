@@ -32,7 +32,7 @@ public class MainDB {
                         break;
                 case 4 :SearchUser();
                         break;
-                case 5 :viewUsers();
+                case 5 :viewAllUsers();
                         break;
                }
 
@@ -42,17 +42,22 @@ public class MainDB {
     }
 
     private static void InsertUser(){
-        db.addData();
+        db.addDataName();
+        db.addDataNum();
         ct.Insert(SearchName, FullName, PhoneNum);
     }
 
     private static void UpdateUser(){
         db.searchUser();
+        db.updateName();
+        db.updateNum();
         ct.Update(NewFullName, SearchName, NewPhoneNum);
     }
 
     private static void DeleteUser(){
         db.searchUser();
+        db.removeUserName();
+        db.removeUserNum();
         ct.Delete(SearchName, FullName, PhoneNum);
     }
 
@@ -61,7 +66,7 @@ public class MainDB {
         ct.Search(SearchName, FullName, PhoneNum);
     }
 
-    private static void viewUsers(){
+    private static void viewAllUsers(){
         ct.viewUsers(FullName, PhoneNum);
     }
 
