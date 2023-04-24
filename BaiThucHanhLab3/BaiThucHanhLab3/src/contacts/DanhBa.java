@@ -7,45 +7,36 @@ public class DanhBa {
     public String SearchName, FullName, PhoneNum, NewFullName, NewPhoneNum;
 
 
-    public String searchUser(){
+    public void searchUser(){
         System.out.println("Nhap ten nguoi dung: ");
         SearchName = sc.nextLine();
-        return SearchName;
     }
 
-    public String addDataName(){
+    public void addDataName(){
         System.out.println("Nhap ten nguoi dung: ");
         FullName = sc.nextLine();
-        return FullName;
     }
 
-    public String addDataNum(){
+    public void addDataNum(){
         System.out.println("Nhap SDT nguoi dung: ");
         PhoneNum = sc.nextLine();
-        return PhoneNum;
     }
 
-    public String updateName(){
+    public void updateName(){
         System.out.println("Nhap ten moi cua nguoi dung: ");
         NewFullName = sc.nextLine();
-        return NewFullName;
     }
 
-    public String updateNum(){
+    public void updateNum(){
         System.out.println("Nhap ten moi cua nguoi dung: ");
         NewPhoneNum = sc.nextLine();
-        return NewPhoneNum;
     }
     
-    public String removeUserName(){
+    public void removeUserName(){
         FullName = null;
-        return FullName;
     }
 
-    public String removeUserNum(){
+    public void removeUserNum(){
         PhoneNum = null;
-        return PhoneNum;
     }
-
-
 }

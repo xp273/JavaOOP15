@@ -42,27 +42,18 @@ public class MainDB {
     }
 
     private static void InsertUser(String FullName, String PhoneNum, String SearchName){
-        db.addDataName();
-        db.addDataNum();
         ct.Insert(SearchName, FullName, PhoneNum);
     }
 
     private static void UpdateUser(String SearchName, String NewFullName, String NewPhoneNum ){
-        db.searchUser();
-        db.updateName();
-        db.updateNum();
         ct.Update(NewFullName, SearchName, NewPhoneNum);
     }
 
     private static void DeleteUser(String SearchName, String FullName, String PhoneNum){
-        db.searchUser();
-        db.removeUserName();
-        db.removeUserNum();
         ct.Delete(SearchName, FullName, PhoneNum);
     }
 
     private static void SearchUser(String SearchName, String FullName, String PhoneNum){
-        db.searchUser();
         ct.Search(SearchName, FullName, PhoneNum);
     }
 
