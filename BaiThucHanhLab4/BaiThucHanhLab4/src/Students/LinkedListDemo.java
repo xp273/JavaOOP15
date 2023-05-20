@@ -2,8 +2,6 @@ package Students;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-
-
 public class LinkedListDemo {
     public static void main(String[] args) {
     

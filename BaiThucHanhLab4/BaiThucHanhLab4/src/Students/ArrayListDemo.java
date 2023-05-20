@@ -3,9 +3,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import Students.Student;
 
-
-
-
 public class ArrayListDemo{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
